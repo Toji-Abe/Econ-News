@@ -28,7 +28,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          model: gemini-2.5-flash
           prompt: |
             You are an AI coding assistant for this repository.
             Respond only when explicitly mentioned with @gemini-cli.
+            Use the repository files as context.
             Help with code explanation, bug fixes, refactoring, tests, and pull request suggestions.
