@@ -24,9 +24,10 @@ jobs:
       - name: Run Gemini CLI
         uses: google-github-actions/run-gemini-cli@v0
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_CLI_TRUST_WORKSPACE: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           prompt: |
             You are an AI coding assistant for this repository.
             Respond only when explicitly mentioned with @gemini-cli.
