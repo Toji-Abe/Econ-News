@@ -25,10 +25,10 @@ jobs:
         uses: google-github-actions/run-gemini-cli@v0
         env:
           GEMINI_CLI_TRUST_WORKSPACE: "true"
+          GEMINI_MODEL: "gemini-2.0-flash"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          model: gemini-2.5-flash
           prompt: |
             You are an AI coding assistant for this repository.
             Respond only when explicitly mentioned with @gemini-cli.
